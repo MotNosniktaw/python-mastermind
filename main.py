@@ -13,7 +13,7 @@ def generatePasscode():
     return output
 
 
-def checkGuess(guess):
+def checkGuess(guess, passcode):
     fullMatchCount = ""
     partialMatchCount = ""
     noMatchCount = ""
@@ -54,7 +54,7 @@ while True:
         print("Your remaining guesses: " + str(guessesLeft))
         print("Your previous guesses")
         for guess in guesses:
-            print(guess + " - " + checkGuess(guess))
+            print(guess + " - " + checkGuess(guess, passcode))
         print()
         print("Give me your next guess:")
 
